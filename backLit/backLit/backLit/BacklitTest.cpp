@@ -1,4 +1,4 @@
-// BacklightDeal.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞòµÄÈë¿Úµã¡£
+// BacklightDeal.cpp : å®šä¹‰æ§åˆ¶å°åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹ã€‚
 //
 
 #include "stdafx.h"
@@ -22,7 +22,7 @@ using namespace cv;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	fstream in("C:\\Users\\user\\Desktop\\test27\\list.txt");
+	fstream in("C:\\Users\\user\\Desktop\\test27\\list.txt"); //change your image file path, you must generate a path list(absulute directory)
 	if (!in)
 	{
 		cout<<"file is not exist"<<endl;
@@ -49,7 +49,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			winRect[i].x*=2;
 			winRect[i].y*=2;
 			winRect[i]+=Size(winRect[i].width, winRect[i].height);
-			Rect wid_Rect;									//ÒÔ¿í¶ÈÎª»ù×¼£¬±ê×¼»¯¼ì³ö½á¹û
+			Rect wid_Rect;									//ä»¥å®½åº¦ä¸ºåŸºå‡†ï¼Œæ ‡å‡†åŒ–æ£€å‡ºç»“æœ
 			Rect Hei_Rect;
 			wid_Rect.width = winRect[i].width;
 			wid_Rect.height = saturate_cast<int>(winRect[i].width*7.0/22);
